@@ -35,7 +35,7 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
     
        
         ```
-        kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 
+        kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090
         ```
       - Note:
         - Here use your deployed service name at the place of "prometheus-kube-prometheus-prometheus".
@@ -47,9 +47,9 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
 
 
         
-        ```
-        kubectl port-forward service/prometheus-grafana 80 
-        ```
+         ```
+         kubectl port-forward service/prometheus-grafana 80
+         ```
         
        - Note:
          - Here use your deployed service name at the place of "prometheus-grafana".
@@ -80,11 +80,11 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
        - Build project using command : ./gradlew clean build
        - Start docker in your machine
        - Start minikube using ``` minikube start --driver=docker ```
-       - Enable docker env using command :  ``` eval $(minikube docker-env)  ```  [Command Reference](https://minikube.sigs.k8s.io/docs/commands/docker-env/)
-       - Build docker image in minikube : ``` docker build -t spring-monitoring-kube . ```
+       - Enable docker env using command :  ```eval $(minikube docker-env)  ```  [Command Reference](https://minikube.sigs.k8s.io/docs/commands/docker-env/)
+       - Build docker image in minikube : ```docker build -t spring-monitoring-kube . ```
        - To deploy on kubernetes cluster run command : ``` helm install mychart ytchart ```
-       - To see deployed helm chart : ``` helm ls ```
-       - Check deployments : ``` kubectl get all ```
+       - To see deployed helm chart : ```helm ls ```
+       - Check deployments : ```kubectl get all ```
        - To access the REST api, do following:
          - Run `kubectl get services` command
          - Copy spring-boot service name
