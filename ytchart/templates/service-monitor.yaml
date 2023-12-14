@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: spring-boot-microservice-monitor
+  labels:
+    release: prometheus
+spec:
+  jobLabel: job
+  endpoints:
+    - interval: 5s
+      path: /actuator/prometheus
+      port: http
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      app: {{ .Values.service.serviceLabel }}
+      job: {{ .Values.service.jobName }}

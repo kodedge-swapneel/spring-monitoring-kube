@@ -1,0 +1,14 @@
+server:
+  port : 8080
+spring:
+  application:
+    name: spring-prometheus-demo
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  health, prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
