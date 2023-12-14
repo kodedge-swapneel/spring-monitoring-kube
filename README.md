@@ -93,6 +93,7 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
            ```
             kubectl port-forward service/mychart-ytchart 8080
            ```
-       - Test by calling `http://loalhost:8080/data`
-           
+       - Test by calling `http://localhost:8080/data`
+       - Now login to Grafana Dashboard
+       - Import dashboard, search dashboard here : [grafana/dashboards](https://grafana.com/grafana/dashboards/). For example try with dashboard id: 11378
   
