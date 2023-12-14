@@ -35,7 +35,7 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
     
        
         ```
-             kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 
+        kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 
         ```
       - Note:
         - Here use your deployed service name at the place of "prometheus-kube-prometheus-prometheus".
@@ -48,7 +48,7 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
 
         
         ```
-             kubectl port-forward service/prometheus-grafana 80 
+        kubectl port-forward service/prometheus-grafana 80 
         ```
         
        - Note:
@@ -63,7 +63,7 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
         - In case this password does not works then do follwing:
           
             ```
-              kubectl get secret
+            kubectl get secret
             ```
              
           there should be secretes for Grafana. Copy its name, and run following command :
@@ -91,7 +91,7 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
          - Then run port-forward command
      
            ```
-            kubectl port-forward service/mychart-ytchart 8080
+           kubectl port-forward service/mychart-ytchart 8080
            ```
        - Test by calling `http://localhost:8080/data`
        - Now login to Grafana Dashboard
