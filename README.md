@@ -2,7 +2,7 @@
 
 ## [Click here to watch the video for demonstration.]()
 
-In this project, I have demonstrated how to monitor Kubernetes and springboot service depplyed in kubernetes cluster using Prometheus and created dashboard in Grafana to visualize the metrics.
+In this project, I have demonstrated how to monitor Kubernetes and springboot service deployed in kubernetes cluster using Prometheus and created dashboard in Grafana to visualize the metrics.
 
 ### Prerequisites:
  - [Docker](https://docs.docker.com/engine/install/) or [Docker alternative - Colima](https://github.com/abiosoft/colima)
@@ -71,4 +71,28 @@ In this project, I have demonstrated how to monitor Kubernetes and springboot se
           kubectl get secret --namespace default prometheus-grafana  -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
           ```
           Note:  Here replace "prometheus-grafana" with your actual deployed secret name which returned by the command `kubectl get secret`
+
+
+       ### Monitor Springboot service from Kubenrtes:
+       
+       - Clone this repository.
+       - cd into this repository from terminal.
+       - Build project using command : ./gradlew clean build
+       - Start docker in your machine
+       - Start minikube using ``` minikube start --driver=docker ```
+       - Enable docker env using command :  ``` eval $(minikube docker-env)  ```  [Command Reference](https://minikube.sigs.k8s.io/docs/commands/docker-env/)
+       - Build docker image in minikube : ``` docker build -t spring-monitoring-kube . ```
+       - To deploy on kubernetes cluster run command : ``` helm install mychart ytchart ```
+       - To see deployed helm chart : ``` helm ls ```
+       - Check deployments : ``` kubectl get all ```
+       - To access the REST api, do following:
+         - Run `kubectl get services` command
+         - Copy spring-boot service name
+         - Then run port-forward command
+     
+           ```
+            kubectl port-forward service/mychart-ytchart 8080
+           ```
+       - Test by calling `http://loalhost:8080/data`
+           
   
