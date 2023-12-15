@@ -2,7 +2,7 @@ server:
   port : 8080
 spring:
   application:
-    name: spring-prometheus-demo
+    name: spring-monitoring-kube
 management:
   endpoints:
     web:
