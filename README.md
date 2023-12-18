@@ -75,7 +75,7 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
 
 - Clone this repository.
 - cd into this repository from the terminal.
-- Build project using command : ./gradlew clean build
+- Build project using command : ```./gradlew clean build```
 - Start docker in your machine.
 - Start minikube using ``` minikube start --driver=docker ```  (Ignore this command if minikube is already started.)
 - Enable docker env using command :  ```eval $(minikube docker-env)  ```  [Command Reference](https://minikube.sigs.k8s.io/docs/commands/docker-env/)
