@@ -11,6 +11,12 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
  - [kubectl](https://kubernetes.io/docs/tasks/tools/)
  - IDE and JDK
 
+
+### Prerequisites on machine :
+1. Start Docker
+2. Start minikube using ```minikube start --driver=docker```
+
+
 ### Setup Prometheus and Grafana 
   1. Get Helm repository info
         ```
@@ -71,7 +77,7 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
 - cd into this repository from the terminal.
 - Build project using command : ./gradlew clean build
 - Start docker in your machine.
-- Start minikube using ``` minikube start --driver=docker ```
+- Start minikube using ``` minikube start --driver=docker ```  (Ignore this command if minikube is already started.)
 - Enable docker env using command :  ```eval $(minikube docker-env)  ```  [Command Reference](https://minikube.sigs.k8s.io/docs/commands/docker-env/)
 - Build docker image in minikube : ```docker build -t spring-monitoring-kube . ```
 - To deploy on kubernetes cluster run command : ``` helm install mychart ytchart ```
