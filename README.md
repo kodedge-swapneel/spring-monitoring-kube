@@ -1,6 +1,6 @@
 # Monitoring Kubernetes and Spring Boot service using Prometheus and Grafana
 
-## [Click here to watch the video for demonstration.]()
+## [Click here to watch the video for demonstration.](https://youtu.be/5c-o6PKlhEQ)
 
 In this project, I have demonstrated how to monitor Kubernetes and Spring Boot service deployed int the Kubernetes cluster using Prometheus and created a dashboard in Grafana to visualize the metrics.
 
