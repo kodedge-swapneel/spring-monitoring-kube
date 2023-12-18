@@ -12,7 +12,7 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
  - IDE and JDK
 
 
-### Prerequisites on machine :
+### Before starting setup on machine :
 1. Start Docker
 2. Start minikube using ```minikube start --driver=docker```
 
