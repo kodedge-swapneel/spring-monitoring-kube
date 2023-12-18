@@ -26,7 +26,7 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
           - Hence command will be ` helm install prometheus prometheus-community/kube-prometheus-stack`
   3. For more information related to command and repository of kube-prometheus-stack, [Click here](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
   4. Once helm chart is installed, verify it with commands like
-        - `helm ls` to check helm chart installed
+        - `helm ls` to check helm chart installed.
         - `kubectl get all` to see all deployed resources in Kubernetes. Please wait until all resources UP in kubernetes.
   5. #### Now to access the prometheus:
       - Run `kubectl get services`
@@ -48,7 +48,7 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
                - Here use your deployed service name at the place of "prometheus-grafana".
                - Also use the port that shows in the service ports section.
                - Generally it will be 80.
-               - In case this command give any `bind: permission denied` issue 
+               - In case this command give any `bind: permission denied` issue,
                - then run command with sudo like this  `sudo kubectl port-forward service/prometheus-grafana 80`
        
        - Now open the browser and run url : `http://localhost:80`. If this does not work try running url returned by port-forward command.
@@ -70,7 +70,7 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
 - Clone this repository.
 - cd into this repository from the terminal.
 - Build project using command : ./gradlew clean build
-- Start docker in your machine
+- Start docker in your machine.
 - Start minikube using ``` minikube start --driver=docker ```
 - Enable docker env using command :  ```eval $(minikube docker-env)  ```  [Command Reference](https://minikube.sigs.k8s.io/docs/commands/docker-env/)
 - Build docker image in minikube : ```docker build -t spring-monitoring-kube . ```
@@ -86,6 +86,6 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
     kubectl port-forward service/mychart-ytchart 8080
     ```
 - Test by calling `http://localhost:8080/data`
-- Now login to Grafana Dashboard
+- Now login to Grafana Dashboard.
 - Import dashboard, search dashboard here : [grafana/dashboards](https://grafana.com/grafana/dashboards/). For example try with dashboard id: 11378
 
