@@ -36,7 +36,7 @@ In this project, I have demonstrated how to monitor Kubernetes and Spring Boot s
         ```
       - Note:
           - Here use your deployed service name at the place of "prometheus-kube-prometheus-prometheus".
-          - Here use your deployed service name at the place of "prometheus-kube-prometheus-prometheus".
+          - Use the port that shows in the service port section.
           - Now open the browser and run the url : `http://localhost:9090`. If this does not work try running url returned by port-forward command.
   6. #### To access the Grafana:
      
